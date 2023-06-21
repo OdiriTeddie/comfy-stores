@@ -4,7 +4,6 @@ import { useAuth0 } from "@auth0/auth0-react";
 const UserContext = React.createContext();
 export const UserProvider = ({ children }) => {
   const { loginWithRedirect, logout, user } = useAuth0();
-  console.log(user);
   const [myUser, setMyUser] = useState(null);
 
   useEffect(() => {
